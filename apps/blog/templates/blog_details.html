@@ -26,7 +26,9 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    {% if comments %}
     <h3>Comments:</h3>
+    {% endif %}
     {% for comment in comments %}
     <p>
         On {{comment.created_on.date }}&nbsp;
