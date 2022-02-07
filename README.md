@@ -41,3 +41,4 @@ Se tiene como objetivo implementar y testear nuevas funcionalidades para continu
   - [django REST Framework](https://www.django-rest-framework.org/) _(pendiente...)_
 - Documentación y tutoriales
   - [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
+  - [Aprende la librería para CSS de Bootstrap desde cero](https://codingpotions.com/bootstrap)
