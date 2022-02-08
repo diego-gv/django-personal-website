@@ -1,81 +1,25 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<h1>Home</h1>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Haz clic para mostrar y ocultar el contenido
-</button>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Dentro de esta etiqueta puedes añadir todo el contenido que quieres que se muestre al pulsar el botón
-  </div>
-</div>
-
 <div class="container">
   <div class="row">
-    <div class="col col-6 bg_blue">
-      Primera columna
+    <div class="col col-4 bg_blue">
+      Nombre, fotografia y links
     </div>
-    <div class="col col-6 bg_orange">
-      Segunda columna
+    <div class="col col-8 bg_orange">
+      <h2>Biografia</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 bg_blue">
+      <h2>Experiencia laboral</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 bg_pink">
+      <h2>Skills</h2>
     </div>
   </div>
 </div>
-
-<div class="container">
-    <!-- Botón standart -->
-  <button type="button" class="btn btn-default">Default</button>
-  <!-- Botón primario -->
-  <button type="button" class="btn btn-primary">Primary</button>
-  <!-- Botón de éxito -->
-  <button type="button" class="btn btn-success">Success</button>
-  <!-- Botón de información  -->
-  <button type="button" class="btn btn-info">Info</button>
-  <!-- Botón de aviso -->
-  <button type="button" class="btn btn-warning">Warning</button>
-  <!-- Botón de peligro  -->
-  <button type="button" class="btn btn-danger">Danger</button>
-  <!-- Botón con énfasis en un link  -->
-  <button type="button" class="btn btn-link">Link</button>
-</div>
-
-<div class="alert alert-primary" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-secondary" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-success" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-danger" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-warning" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-info" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-light" role="alert">
-  Contenido de la alerta
-</div>
-<div class="alert alert-dark" role="alert">
-  Contenido de la alerta
-</div>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Sección</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Sección actual</li>
-  </ol>
-</nav>
-
-
-
-
-
-
 
 {% endblock %}
