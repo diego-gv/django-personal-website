@@ -37,8 +37,19 @@ Se tiene como objetivo implementar y testear nuevas funcionalidades para continu
 
 ## Material empleado
 - Frameworks y herramientas
-  - [Django](https://www.djangoproject.com/)
-  - [django REST Framework](https://www.django-rest-framework.org/) _(pendiente...)_
+  - [Bootstrap](https://getbootstrap.com/)
 - Documentación y tutoriales
   - [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
   - [Aprende la librería para CSS de Bootstrap desde cero](https://codingpotions.com/bootstrap)
+  - [How to generate lots of dummy data for your Django app](https://mattsegal.dev/django-factoryboy-dummy-data.html)
+
+## Principales dependencias
+```text
+Django==4.0.2
+factory-boy==3.2.1
+django REST Framework  _(pendiente...)_ https://www.django-rest-framework.org/
+```
+
+Además se han utilizado los siguientes frameworks o paquetes:
+
+- [Bootstrap 4.1.3](https://getbootstrap.com/)
