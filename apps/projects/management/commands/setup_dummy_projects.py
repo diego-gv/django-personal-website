@@ -19,4 +19,4 @@ class Command(BaseCommand):
 
         self.stdout.write("Creating new data...")
         for i in range(4):
-            ProjectFactory(image=random.choice(['img/django_logo.png', 'img/flask_logo.png']))
+            ProjectFactory(image=random.choice(['/img/django_logo.png', '/img/flask_logo.png', '/img/nodejs_logo.png']))
