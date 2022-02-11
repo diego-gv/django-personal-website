@@ -17,6 +17,8 @@
         {% endfor %}
     </small>
     <p>{{ post.body | slice:":400" }}...</p>
+    <small>Comments: {{ post.comments.all|length }}</small>
+    <hr>
     {% endfor %}
 </div>
 {% endblock %}

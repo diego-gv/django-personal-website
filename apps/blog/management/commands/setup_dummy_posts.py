@@ -9,7 +9,7 @@ from apps.blog.models import Category, Post, Comment
 N_CATEGORIES = 5
 N_POSTS = 5
 N_CATEGORIES_BY_POST = 2
-N_COMMENTS_BY_POST = 10
+N_COMMENTS_BY_POST = 25
 
 
 class Command(BaseCommand):
@@ -31,5 +31,6 @@ class Command(BaseCommand):
             post = PostFactory()
             post_categories = random.choices(categories, k=N_CATEGORIES_BY_POST)
             post.categories.add(*post_categories)
-            for _ in range(N_COMMENTS_BY_POST):
+            random_n_comments = random.randint(0, N_COMMENTS_BY_POST)
+            for _ in range(random_n_comments):
                 CommentFactory(post=post)
