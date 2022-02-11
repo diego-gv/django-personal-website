@@ -21,5 +21,6 @@ urlpatterns = [
     # path('', include('apps.hello_world.urls'))
     path('', include('apps.home.urls')),
     path('projects/', include('apps.projects.urls')),
-    path('blog/', include('apps.blog.urls'))
+    path('blog/', include('apps.blog.urls')),
+    path('account/', include('apps.users.urls')),
 ]
