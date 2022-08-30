@@ -24,3 +24,9 @@ urlpatterns = [
     path('blog/', include('apps.blog.urls')),
     path('account/', include('apps.users.urls')),
 ]
+
+# SECURITY WARNING: don't run with this bellow code on in production!
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,17 @@
+version: "2.1"
+
+services:
+    portfolio:
+        container_name: portfolio
+        image: portfolio:latest
+        build:
+            context: ..
+        expose:
+            - "8888"
+        environment:
+            - VIRTUAL_HOST=portfolio.localhost
+            - VIRTUAL_PORT=8888
+        volumes:
+            - ..:/local
+        command: bash -c "sleep infinity"
+        # command: bash -c "gunicorn portfolio.wsgi --workers 1 -b 0.0.0.0:8888 --reload"

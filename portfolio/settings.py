@@ -24,10 +24,10 @@ SECRET_KEY = 'django-insecure-k0ww6m$=7q^f2pt&)w3o-@*s+l22nyk%p*y7275^8(pvy&)%*k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# SECURITY WARNING: don't run with 0.0.0.0 allowed on in production!
+ALLOWED_HOSTS = ["0.0.0.0"]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,8 +121,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# SECURITY WARNING: don't run with STATIC_ROOT on in production!
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
