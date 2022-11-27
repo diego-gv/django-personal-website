@@ -1,3 +1,0 @@
-python3 manage.py setup_dummy_projects
-python3 manage.py setup_dummy_posts
-python3 manage.py setup_dummy_users

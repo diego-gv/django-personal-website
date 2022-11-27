@@ -67,8 +67,8 @@ python3 manage.py setup_dummy_projects
 python3 manage.py setup_dummy_posts
 python3 manage.py setup_dummy_users
 
-# bash script conjunto
-bash setup_dummy_data.sh
+# comando conjunto
+python3 manage.py setup_dummy_data
 ```
 
 El servidor podemos lanzarlo a través de dos posibles comandos:
