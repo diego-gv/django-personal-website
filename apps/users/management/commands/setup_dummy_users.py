@@ -19,4 +19,4 @@ class Command(BaseCommand):
 
         self.stdout.write("Creating new data...")
         AdminUserFactory()
-        UserFactory(username='garvi', password='garvi')
+        UserFactory(username='garvi', password='garvi', email='garvi@example.com')

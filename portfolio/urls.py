@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('apps.home.urls')),
     path('projects/', include('apps.projects.urls')),
     path('blog/', include('apps.blog.urls')),
-    path('account/', include('apps.users.urls')),
+    path('accounts/', include('apps.users.urls')),
 ]
 
 if settings.DEBUG:

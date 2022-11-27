@@ -10,7 +10,7 @@ class AdminUserFactory(DjangoModelFactory):
     class Meta:
         model = User
         
-    email = 'admin@admin.com'
+    email = 'admin@example.com'
     username = 'admin'
     password = factory.PostGenerationMethodCall('set_password', 'admin')
 
@@ -23,7 +23,7 @@ class UserFactory(DjangoModelFactory):
     class Meta:
         model = User
         
-    email = 'user@user.com'
+    email = 'user@example.com'
     username = 'user'
     password = factory.PostGenerationMethodCall('set_password', 'user')
 

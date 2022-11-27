@@ -57,7 +57,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['portfolio/templates'],
+        'DIRS': ['portfolio/templates', 'apps/users/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,6 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Login configuration
 LOGIN_REDIRECT_URL = "dashboard"
 LOGOUT_REDIRECT_URL = "login"
+
+# SMPT server
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 1025
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/

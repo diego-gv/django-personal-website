@@ -40,7 +40,8 @@ Se tiene como objetivo implementar y testear nuevas funcionalidades para continu
 - Frameworks y herramientas
   - [Bootstrap](https://getbootstrap.com/)
 - Documentación y tutoriales
-  - [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
+  - [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/) (_done_)
+  - [Get Started With Django Part 2: Django User Management](https://realpython.com/django-user-management/) (_[TODO](https://realpython.com/django-user-management/#change-email-templates)_)
   - [Aprende la librería para CSS de Bootstrap desde cero](https://codingpotions.com/bootstrap)
   - [How to generate lots of dummy data for your Django app](https://mattsegal.dev/django-factoryboy-dummy-data.html)
 
@@ -77,6 +78,12 @@ El servidor podemos lanzarlo a través de dos posibles comandos:
 gunicorn portfolio.wsgi --workers 1 --timeout 0 -b 0.0.0.0:8888 --reload # http://localhost:8888/
 # django
 python manage.py runserver # http://127.0.0.1:8000/
+```
+
+Para arrancar el servidor de correo para pruebas se puede hacer lanzando el siguiente comando en la consola:
+
+```sh
+python -m smtpd -n -c DebuggingServer localhost:1025
 ```
 
 ### Errores

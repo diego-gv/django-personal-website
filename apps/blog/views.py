@@ -34,7 +34,7 @@ def blog_details(request, _id):
     context = {
         "post": post,
         "comments": comments,
-        "form": form
+        "form": CommentForm() # to clear the form
     }
 
     return render(request, "blog_details.html", context)
