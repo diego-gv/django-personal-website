@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable MD033 -->
 <h1 align="center">Personal portfolio</h1>
 
 <div align="center">
@@ -36,6 +36,7 @@ Este proyecto representa un ejemplo para aprender y practicar el framework [Djan
 Se tiene como objetivo implementar y testear nuevas funcionalidades para continuar aprendiendo este increíble framework (y paquetes estrechamente relacionados), perfeccionar el manejo del propio lenguaje [Python](https://www.python.org/downloads/) y aprender sobre el desarrollo FullStack.
 
 ## Material empleado
+
 - Frameworks y herramientas
   - [Bootstrap](https://getbootstrap.com/)
 - Documentación y tutoriales
@@ -44,6 +45,7 @@ Se tiene como objetivo implementar y testear nuevas funcionalidades para continu
   - [How to generate lots of dummy data for your Django app](https://mattsegal.dev/django-factoryboy-dummy-data.html)
 
 ## Principales dependencias
+
 ```text
 Django==4.0.2
 factory-boy==3.2.1
@@ -53,3 +55,34 @@ django REST Framework  _(pendiente...)_ https://www.django-rest-framework.org/
 Además se han utilizado los siguientes frameworks o paquetes:
 
 - [Bootstrap 4.1.3](https://getbootstrap.com/)
+
+## Entorno de desarrollo
+
+Para poder trabajar de forma comoda se han preparado una serie de comandos para generar datos de prueba. Estos comandos son:
+
+```sh
+# comandos individuales
+python3 manage.py setup_dummy_projects
+python3 manage.py setup_dummy_posts
+python3 manage.py setup_dummy_users
+
+# bash script conjunto
+bash setup_dummy_data.sh
+```
+
+El servidor podemos lanzarlo a través de dos posibles comandos:
+
+```sh
+# gunicorn
+gunicorn portfolio.wsgi --workers 1 --timeout 0 -b 0.0.0.0:8888 --reload # http://localhost:8888/
+# django
+python manage.py runserver # http://127.0.0.1:8000/
+```
+
+### Errores
+
+Es posible que los ficheros `static`, como los `CSS styles` no se muestren de forma correcta. Para solucionarlo solo hay que ejecutar el siguiente comando (Fuente [stackoverflow](https://stackoverflow.com/questions/4420378/why-does-my-django-admin-site-not-have-styles-css-loading/10047615#10047615)):
+
+```sh
+python manage.py collectstatic
+```
