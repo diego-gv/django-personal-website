@@ -25,7 +25,7 @@ class UserFactory(DjangoModelFactory):
         
     email = 'user@example.com'
     username = 'user'
-    password = factory.PostGenerationMethodCall('set_password', 'user')
+    password = factory.PostGenerationMethodCall('set_password', '0000')
 
     is_superuser = False
     is_staff = False
