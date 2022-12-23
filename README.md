@@ -16,9 +16,14 @@
       alt="made-with-python" />
   </a>
   <!-- Python version -->
-  <a href="https://www.python.org/downloads/release/python-3810/">
-    <img src="https://img.shields.io/badge/python-3.8.10-blue.svg"
-      alt="Python 3.8.10" />
+  <a href="https://www.python.org/downloads/release/python-3916/">
+    <img src="https://img.shields.io/badge/python-3.9.16-blue.svg"
+      alt="Python 3.9.16" />
+  </a>
+  <!-- Django version -->
+  <a href="https://docs.djangoproject.com/en/4.1/releases/4.0.2/">
+    <img src="https://img.shields.io/badge/django-4.0.2-darkgreen.svg"
+      alt="Django 4.0.2" />
   </a>
   <!-- Test Coverage --> <!--TODO-->
   <a href="https://codecov.io/github/diego-gv/django-personal-portfolio">
@@ -38,19 +43,25 @@ Se tiene como objetivo implementar y testear nuevas funcionalidades para continu
 ## Material empleado
 
 - Frameworks y herramientas
-  - [Bootstrap](https://getbootstrap.com/)
+  - [x] [Bootstrap](https://getbootstrap.com/)
+  - [ ] [Django](https://www.djangoproject.com/)
+  - [ ] [Django REST framework](https://www.django-rest-framework.org/)
+  - [ ] [Django CMS](https://docs.django-cms.org/en/latest/index.html)
 - Documentación y tutoriales
-  - [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/) (_done_)
-  - [Get Started With Django Part 2: Django User Management](https://realpython.com/django-user-management/) (_[TODO](https://realpython.com/django-user-management/#change-email-templates)_)
-  - [Aprende la librería para CSS de Bootstrap desde cero](https://codingpotions.com/bootstrap)
-  - [How to generate lots of dummy data for your Django app](https://mattsegal.dev/django-factoryboy-dummy-data.html)
+  - [ ] [Aprende la librería para CSS de Bootstrap desde cero](https://codingpotions.com/bootstrap)
+  - [x] [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
+  - [x] [Get Started With Django Part 2: Django User Management](https://realpython.com/django-user-management/)
+    - [ ] Send Emails to the Outside World
+    - [ ] Log in With GitHub
+  - [ ] [Get Started With Django Part 3: Django View Authorization](https://realpython.com/django-user-management/)
+  - [x] [How to generate lots of dummy data for your Django app](https://mattsegal.dev/django-factoryboy-dummy-data.html)
 
 ## Principales dependencias
 
 ```text
 Django==4.0.2
 factory-boy==3.2.1
-django REST Framework  _(pendiente...)_ https://www.django-rest-framework.org/
+django-extensions _(pendiente...)_ https://django-extensions.readthedocs.io/
 ```
 
 Además se han utilizado los siguientes frameworks o paquetes:
@@ -58,6 +69,8 @@ Además se han utilizado los siguientes frameworks o paquetes:
 - [Bootstrap 4.1.3](https://getbootstrap.com/)
 
 ## Entorno de desarrollo
+
+### Generar datos de _dummy_ de muestra
 
 Para poder trabajar de forma comoda se han preparado una serie de comandos para generar datos de prueba. Estos comandos son:
 
@@ -71,6 +84,8 @@ python3 manage.py setup_dummy_users
 python3 manage.py setup_dummy_data
 ```
 
+### Lanzar el servidor
+
 El servidor podemos lanzarlo a través de dos posibles comandos:
 
 ```sh
@@ -80,11 +95,18 @@ gunicorn portfolio.wsgi --workers 1 --timeout 0 -b 0.0.0.0:8888 --reload # http:
 python manage.py runserver # http://127.0.0.1:8000/
 ```
 
+### Servidor de correo
+
 Para arrancar el servidor de correo para pruebas se puede hacer lanzando el siguiente comando en la consola:
 
 ```sh
 python -m smtpd -n -c DebuggingServer localhost:1025
 ```
+
+También se puede configurar un servidor real para realizar pruebas más realistas. ALgunos servidores gratuitos de prueba son:
+
+- [Mail](https://www.mailgun.com/)
+- [Sendinblue](https://es.sendinblue.com/)
 
 ### Errores
 

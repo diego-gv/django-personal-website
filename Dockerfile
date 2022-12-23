@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.9
 ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
 RUN mkdir /local
