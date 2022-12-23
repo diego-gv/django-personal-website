@@ -26,6 +26,8 @@ urlpatterns = [
     path('accounts/', include('apps.users.urls')),
 ]
 
+handler404 = "portfolio.views.handler404"
+
 if not settings.DEBUG:
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
     urlpatterns += staticfiles_urlpatterns()

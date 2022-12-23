@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from apps.blog.forms import CommentForm
 from apps.blog.models import Post, Comment
@@ -16,7 +16,8 @@ def blog_index(request):
 
 
 def blog_details(request, _id):
-    post = Post.objects.get(id=_id)
+    post = get_object_or_404(Post, id=_id)
+    # post = Post.objects.get(id=_id)
 
     form = CommentForm()
     if request.method == 'POST':
