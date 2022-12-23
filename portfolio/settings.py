@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k0ww6m$=7q^f2pt&)w3o-@*s+l22nyk%p*y7275^8(pvy&)%*k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', False)
+DEBUG = os.getenv('DEBUG', False) == 'True'
 
-ALLOWED_HOSTS = []
+HOSTNAME = os.getenv('HOSTNAME')
+
+# SECURITY WARNING: don't run with 0.0.0.0 allowed on in production!
+ALLOWED_HOSTS = [HOSTNAME, "localhost", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -57,7 +60,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['portfolio/templates', 'apps/users/templates'],
+        'DIRS': ['portfolio/templates', 'apps/users/templates', 'apps/blog/templates', 'apps/projects/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,27 +123,28 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if DEBUG:
-    logging.warning("SECURITY WARNING: don't run with debug turned on in production!")
-
-    # SECURITY WARNING: don't run with 0.0.0.0 allowed on in production!
-    ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "localhost"]
-
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+STATIC_URL = 'static/'
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+elif DEBUG:
+    logging.warning(
+        "SECURITY WARNING: don't run with debug turned on in production!")
+    
     AUTH_PASSWORD_VALIDATORS = []
+    
+    ALLOWED_HOSTS.append('0.0.0.0')
+    if os.getenv('VIRTUAL_HOST'):
+        ALLOWED_HOSTS.append(os.getenv('VIRTUAL_HOST'))
 
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     STATICFILES_DIRS = []

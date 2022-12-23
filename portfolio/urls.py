@@ -26,9 +26,11 @@ urlpatterns = [
     path('accounts/', include('apps.users.urls')),
 ]
 
-if settings.DEBUG:
+if not settings.DEBUG:
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+    urlpatterns += staticfiles_urlpatterns()
+elif settings.DEBUG:
     # SECURITY WARNING: don't run with this bellow code on in production!
     from django.conf import settings
     from django.conf.urls.static import static
-
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -214,3 +214,4 @@ cython_debug/
 
 # Static
 static/admin
+staticfiles
