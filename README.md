@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 -->
-<h1 align="center">Personal portfolio</h1>
+<h1 align="center">Personal website</h1>
 
 <div align="center">
   :snake:
@@ -38,15 +38,19 @@
 
 Este proyecto representa un ejemplo para aprender y practicar el framework [Django](https://www.djangoproject.com/) y comenzó como un ejemplo basado en un tutorial de [RealPython](https://realpython.com/) (ver material empleado).
 
-Se tiene como objetivo implementar y testear nuevas funcionalidades para continuar aprendiendo este increíble framework (y paquetes estrechamente relacionados), perfeccionar el manejo del propio lenguaje [Python](https://www.python.org/downloads/) y aprender sobre el desarrollo FullStack.
+Se tiene como objetivo implementar y testear nuevas funcionalidades para continuar aprendiendo este increíble framework (y paquetes estrechamente relacionados), perfeccionar el manejo del propio lenguaje [Python](https://www.python.org/downloads/) y aprender sobre el desarrollo FullStack con la única ambición de obtener unas competencias mínimas técnicas para comprender el frontend y como se relaciona con el backend.
+
+#### Background inicial
+
+Mi background al comienzo de este proyecto es el de desarrollador web, únicamente en la parte de backend y el desarrollo de APIs principalmente con el "micro" framework Flask, teniendo muy poco conocimiento o ningún conocimiento técnico del frontend y sus tecnologías asociadas.
 
 ## Material empleado
 
 - Frameworks y herramientas
-  - [x] [Bootstrap](https://getbootstrap.com/)
-  - [ ] [Django](https://www.djangoproject.com/)
-  - [ ] [Django REST framework](https://www.django-rest-framework.org/)
-  - [ ] [Django CMS](https://docs.django-cms.org/en/latest/index.html)
+  - [Bootstrap](https://getbootstrap.com/)
+  - [Django](https://www.djangoproject.com/)
+  - [Django REST framework](https://www.django-rest-framework.org/)
+  - [Django CMS](https://docs.django-cms.org/en/latest/index.html)
 - Documentación y tutoriales
   - [ ] [Aprende la librería para CSS de Bootstrap desde cero](https://codingpotions.com/bootstrap)
   - [x] [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
@@ -72,7 +76,7 @@ Además se han utilizado los siguientes frameworks o paquetes:
 
 ### Generar datos de _dummy_ de muestra
 
-Para poder trabajar de forma comoda se han preparado una serie de comandos para generar datos de prueba. Estos comandos son:
+Para poder trabajar de forma cómoda se han preparado una serie de comandos para generar datos de prueba. Estos comandos son:
 
 ```sh
 # comandos individuales
@@ -103,7 +107,7 @@ Para arrancar el servidor de correo para pruebas se puede hacer lanzando el sigu
 python -m smtpd -n -c DebuggingServer localhost:1025
 ```
 
-También se puede configurar un servidor real para realizar pruebas más realistas. ALgunos servidores gratuitos de prueba son:
+También se puede configurar un servidor real para realizar pruebas más realistas. Algunos servidores gratuitos de prueba son:
 
 - [Mail](https://www.mailgun.com/)
 - [Sendinblue](https://es.sendinblue.com/)
