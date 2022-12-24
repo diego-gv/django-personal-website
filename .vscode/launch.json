@@ -1,26 +1,12 @@
 {
     "version": "0.2.0",
+    "compounds": [
+        // Inherited from user settings.json
+    ],
     "configurations": [
-        {
-            "name": "Python: Django",
-            "type": "python",
-            "cwd": "${workspaceFolder}",
-            "request": "launch",
-            "program": "/usr/local/bin/gunicorn",
-            "args": [
-                "portfolio.wsgi",
-                "--workers",
-                "1",
-                "--threads",
-                "100",
-                "--timeout",
-                "0",
-                "-b",
-                "0.0.0.0:8888",
-                "--reload"
-            ],
-            "django": true,
-            "justMyCode": false
-        }
+        // Inherited from user settings.json
+    ],
+    "inputs": [
+        // Inherited from user settings.json
     ]
 }
