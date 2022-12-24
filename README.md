@@ -59,6 +59,9 @@ Mi background al comienzo de este proyecto es el de desarrollador web, únicamen
     - [ ] Log in With GitHub
   - [ ] [Get Started With Django Part 3: Django View Authorization](https://realpython.com/django-user-management/)
   - [x] [How to generate lots of dummy data for your Django app](https://mattsegal.dev/django-factoryboy-dummy-data.html)
+- Recursos
+  - [ColorHunt](https://www.colorhunt.co/) ([recurso utilizado](https://www.colorhunt.co/palette/eb455ffcffe7bad7e92b3467))
+  - [FontAwesome](https://fontawesome.com/) ([recurso utilizado](https://fontawesome.com/search?s=regular&f=classic&o=r))
 
 ## Principales dependencias
 
