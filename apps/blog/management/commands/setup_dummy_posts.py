@@ -3,8 +3,8 @@ import random
 from django.core.management import BaseCommand
 from django.db import transaction
 
-from apps.blog.factories import CategoryFactory, PostFactory, CommentFactory
-from apps.blog.models import Category, Post, Comment
+from apps.blog.factories import CategoryFactory, CommentFactory, PostFactory
+from apps.blog.models import Category, Comment, Post
 
 N_CATEGORIES = 5
 N_POSTS = 5
@@ -28,9 +28,8 @@ class Command(BaseCommand):
             categories.append(CategoryFactory())
 
         for _ in range(N_POSTS):
-            post = PostFactory()
             post_categories = random.choices(categories, k=N_CATEGORIES_BY_POST)
-            post.categories.add(*post_categories)
+            post = PostFactory(categories=post_categories)
             random_n_comments = random.randint(0, N_COMMENTS_BY_POST)
             for _ in range(random_n_comments):
                 CommentFactory(post=post)
