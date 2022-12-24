@@ -1,26 +1,96 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<title>Home</title>
-<div class="container">
-  <div class="row">
-    <div class="col col-4 bg_blue">
-      Nombre, fotografia y links
-    </div>
-    <div class="col col-8 bg_orange">
-      <h2>Biografia</h2>
-    </div>
+<title>Diego Salvador García Vidal</title>
+<section id="about_me">
+  <div class="profile">
+      <img class="profile-img" src="https://esports.as.com/2022/10/19/bonus/influencers/IlloJuan-deja-clara-postura_1621347860_1061050_988x600.jpg"  alt="me">
+      <h1>Diego Salvador García Vidal</h1>
+      <h2>Senior Backend Developer</h2>
+      <ul class="network-icon">
+          <li>
+            <a href="mailto:diegosalvador.gv@gmail.com" >
+              <i class="fas fa-envelope big-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/diego-gv" target="_blank" rel="noopener">
+              <i class="fab fa-github big-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/diegosalvadorgv" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin big-icon"></i>
+            </a>
+          </li>
+      </ul>
   </div>
-  <div class="row">
-    <div class="col col-12 bg_blue">
-      <h2>Experiencia laboral</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col col-12 bg_pink">
-      <h2>Skills</h2>
-    </div>
-  </div>
-</div>
+
+  <h2>About me</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nunc ad rutrum aenean augue dignissim, potenti sapien urna class ante sed id lacinia risus justo in. Senectus mus porttitor habitasse ultricies et dis molestie malesuada congue proin, interdum aenean torquent neque fames cras venenatis morbi rutrum, dictumst cum nisl a at mattis ornare volutpat pellentesque. Cum placerat tempor viverra lobortis sociis aliquet convallis tempus non etiam mollis, arcu pellentesque rutrum sociosqu dignissim erat aliquam augue eu ridiculus class, ante vehicula duis scelerisque ultrices potenti risus cubilia suscipit sed. Eu cubilia purus sapien dui parturient eros sociosqu orci litora, est volutpat tempor at ligula porttitor fermentum luctus, blandit hac ultricies erat a posuere tempus pulvinar.</p>
+
+  <h3>Interests</h3>
+  <ul>
+      <li>Backend development</li>
+      <li>Web development</li>
+      <li>Machine Learning</li>
+      <li>Software Infraestructure</li>
+  </ul>
+
+  <h3>Education</h3>
+  <ul>
+      <li>MSc in Big Data Analysis Technologies: Big Data, 2021. University of Murcia</li>
+      <li>BSc in Computer Engineering, Computer Science specialization, 2018. University of Murcia</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul>
+      <li>Babel</li>
+      <ul>
+          <li>Senior Backend Developer, 2022-actuality</li>
+      </ul>
+      <li>HOPU</li>
+      <ul>
+          <li>Mid-Level Backend Developer, 2019-2021</li>
+          <li>Junior Backend Developer, 2018-2019</li>
+      </ul>
+      <li>NEORIS</li>
+      <ul>
+          <li>Internship Android Developer, 2017-2017</li>
+      </ul>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+      <li>Python</li>
+      <li>Git</li>
+      <li>Django</li>
+      <li>Flask</li>
+      <li>Docker</li>
+      <li>Linux</li>
+  </ul>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <ul>
+      <li>Pending</li>
+      <li>Pending</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <ul>
+      <li>Email: <a href="diegosalvador.gv@gmail.com">diegosalvador.gv@gmail.com</a></li>
+      <li>Location: Murcia</li>
+      <li><a href="https://github.com/diego-gv">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/diegosalvadorgv/">LinkedIn</a></li>
+  </ul>
+</section>
 
 {% endblock %}
