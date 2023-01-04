@@ -5,17 +5,25 @@ body {
   background-color: #FCFFE7;
 }
 
-a {
+a,
+a:hover,
+a:visited,
+a:active {
   text-decoration: none;
   color: #EB455F;
 }
 
-section {
+/*section {
   padding: 20px;
-}
+}*/
 
-section:nth-child(odd) {
+/* collors interspersed by section, in this case only odd */
+/*section:nth-child(odd) {
   background-color: #BAD7E9;
+}*/
+
+#introduction {
+  padding-top: 20px;
 }
 
 .profile-img {
@@ -25,14 +33,20 @@ section:nth-child(odd) {
   object-fit: cover;
   object-position: -70px;
   border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .profile {
   text-align: center;
+  width: 325px;
+  float: left;
+}
+
+.profile h1 {
+  line-height: 45px;
 }
 
 .profile h2 {
-  margin-top: -15px;
   color: #9F9F9F;
   font-size: 20px;
   font-weight: normal;
@@ -50,6 +64,21 @@ section:nth-child(odd) {
   font-size: 30px;
 }
 
-h2 {
-  font-size: 35px;
+.about_me {
+  width: 575px;
+  margin-left: 355px;
+  text-align: justify;
+}
+
+.about_me h2,
+h3 {
+  font-size: 22px;
+}
+
+.education-column .education-list .description {
+  border: 5ex;
+}
+
+.experience {
+  overflow: hidden;
 }

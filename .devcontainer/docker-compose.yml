@@ -14,7 +14,7 @@ services:
             - DEBUG=True
         volumes:
             - ..:/local
-            - vscode-extensions-portfolio:/root/.vscode-server/extensions
+            # - vscode-extensions-portfolio:/root/.vscode-server/extensions
         command: bash -c "sleep infinity"
         # command: bash -c "gunicorn portfolio.wsgi --workers 1 -b 0.0.0.0:8888 --reload"
 
